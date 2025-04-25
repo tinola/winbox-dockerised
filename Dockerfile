@@ -7,7 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
 
 #Download WinBox
 #Permission has been granted by Mikrotik (via support@mikrotik.com, ticket number #[SUP-114983]) to distribute WinBox unmodified within this image.
-RUN wget -O /tmp/winbox.zip https://download.mikrotik.com/routeros/winbox/4.0beta18/WinBox_Linux.zip && unzip /tmp/winbox.zip -d / && rm /tmp/winbox.zip
+RUN wget -O /tmp/winbox.zip https://download.mikrotik.com/routeros/winbox/4.0beta20/WinBox_Linux.zip && unzip /tmp/winbox.zip -d / && rm /tmp/winbox.zip
 
 #Copy in entrypoint script and WinBox license
 WORKDIR /
