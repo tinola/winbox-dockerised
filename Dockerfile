@@ -14,6 +14,7 @@ WORKDIR /
 COPY ./entrypoint.sh ./WINBOX_LICENSE /
 # Create directories and edit OpenBox config to launch maximized
 RUN mkdir -p /root/.local/share/MikroTik/WinBox/workspaces/ && sed -i 's#</applications>#<application class="*"><maximized>yes</maximized></application></applications>#' /etc/xdg/openbox/rc.xml
+VOLUME /root/.local/share/MikroTik/
 
 #Finalise
 EXPOSE 5900
